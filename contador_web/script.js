@@ -1,5 +1,5 @@
 // ALTERE PARA A DATA DE VOCÊS
-const dataInicio = new Date("2026-05-28T20:00:00");
+const dataInicio = new Date("2026-05-29T22:00:00");
 
 function atualizarContador() {
 
