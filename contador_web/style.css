@@ -10,13 +10,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-
-    background: linear-gradient(
-        135deg,
-        #ff4d88,
-        #8e44ad
-    );
-
+    background:linear-gradient(135deg, #ff4d88, #8e44ad);
     color:white;
 }
 
