@@ -1,10 +1,7 @@
-// ALTERE PARA A DATA DE VOCÊS
-const dataInicio = new Date("2026-05-29T22:00:00");
+const dataInicio = new Date("2026-05-29T23:00:00");
 
 function atualizarContador() {
-
     const agora = new Date();
-
     let diferenca = agora - dataInicio;
 
     let segundosTotal = Math.floor(diferenca / 1000);
