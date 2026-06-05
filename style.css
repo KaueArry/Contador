@@ -10,6 +10,37 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
+
+    background: linear-gradient(
+        135deg,
+        #ff4d88,
+        #8e44ad
+    );
+
+    color:white;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.18)' stroke-width='3'%3E%3Cpath d='M500 500 C450 350 300 300 250 450 C350 430 450 520 500 500'/%3E%3Cpath d='M500 500 C550 350 700 300 750 450 C650 430 550 520 500 500'/%3E%3Cpath d='M500 500 C430 550 380 700 500 800 C620 700 570 550 500 500'/%3E%3Cpath d='M500 500 C350 450 250 550 300 700 C400 650 470 560 500 500'/%3E%3Cpath d='M500 500 C650 450 750 550 700 700 C600 650 530 560 500 500'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size:300px 300px;
+    background-repeat:repeat;
+    opacity:0.4;
+
+    pointer-events:none;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     background:linear-gradient(135deg, #ff4d88, #8e44ad);
     color:white;
 }
@@ -53,4 +84,18 @@ h1{
 .data{
     margin-top:30px;
     font-size:1.1rem;
+}
+
+.container{
+    text-align:center;
+    padding:30px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 80px rgba(255,255,255,0.08);
 }
