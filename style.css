@@ -149,3 +149,42 @@ h1{
         transform:translateY(0px) translateX(0px) rotate(0deg);
     }
 }
+
+@media (max-width: 768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+        max-width:450px;
+
+        padding:25px 20px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    .frase{
+        font-size:1rem;
+    }
+
+    .contador{
+        gap:10px;
+    }
+
+    .tempo{
+        min-width:90px;
+        padding:15px;
+    }
+
+    .tempo span{
+        font-size:1.5rem;
+    }
+
+    .data{
+        font-size:0.95rem;
+    }
+}
