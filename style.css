@@ -11,53 +11,60 @@ body{
     justify-content:center;
     align-items:center;
     overflow:hidden;
+    position:relative;
 
-    background: linear-gradient(
+    background:linear-gradient(
         135deg,
         #ff4d88,
         #8e44ad
     );
 
     color:white;
-    position:relative;
 }
 
+/* Lírios brancos ao fundo */
 body::before{
     content:"";
     position:absolute;
     inset:0;
 
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.18)' stroke-width='3'%3E%3Cpath d='M500 500 C450 350 300 300 250 450 C350 430 450 520 500 500'/%3E%3Cpath d='M500 500 C550 350 700 300 750 450 C650 430 550 520 500 500'/%3E%3Cpath d='M500 500 C430 550 380 700 500 800 C620 700 570 550 500 500'/%3E%3Cpath d='M500 500 C350 450 250 550 300 700 C400 650 470 560 500 500'/%3E%3Cpath d='M500 500 C650 450 750 550 700 700 C600 650 530 560 500 500'/%3E%3C/g%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='white' stroke-opacity='0.14' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M400 400 C330 250 220 220 180 330 C260 320 340 360 400 400'/%3E%3Cpath d='M400 400 C470 250 580 220 620 330 C540 320 460 360 400 400'/%3E%3Cpath d='M400 400 C320 390 230 470 260 600 C340 550 390 470 400 400'/%3E%3Cpath d='M400 400 C480 390 570 470 540 600 C460 550 410 470 400 400'/%3E%3Cpath d='M400 400 C360 500 360 620 400 720 C440 620 440 500 400 400'/%3E%3Cpath d='M400 400 C390 460 390 520 400 580'/%3E%3Cpath d='M400 580 C390 620 380 660 360 710'/%3E%3Cpath d='M400 580 C410 620 420 660 440 710'/%3E%3C/g%3E%3C/svg%3E");
 
-    background-size:300px 300px;
+    background-size:320px 320px;
     background-repeat:repeat;
-    opacity:0.4;
+    opacity:0.65;
 
     pointer-events:none;
 }
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg, #ff4d88, #8e44ad);
-    color:white;
-}
-
 .container{
+    position:relative;
+    z-index:1;
+
     text-align:center;
     padding:30px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 80px rgba(255,255,255,0.08);
 }
 
 h1{
     margin-bottom:20px;
     font-size:3rem;
+    text-shadow:0 0 15px rgba(255,255,255,0.25);
 }
 
 .frase{
     margin-bottom:30px;
     font-size:1.2rem;
+    opacity:0.95;
 }
 
 .contador{
@@ -72,7 +79,17 @@ h1{
     padding:20px;
     border-radius:15px;
     min-width:110px;
+
     backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    transition:0.3s;
+}
+
+.tempo:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,0.20);
 }
 
 .tempo span{
@@ -84,18 +101,5 @@ h1{
 .data{
     margin-top:30px;
     font-size:1.1rem;
-}
-
-.container{
-    text-align:center;
-    padding:30px;
-
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
-
-    border-radius:25px;
-
-    box-shadow:
-        0 0 30px rgba(0,0,0,0.2),
-        0 0 80px rgba(255,255,255,0.08);
+    opacity:0.9;
 }
